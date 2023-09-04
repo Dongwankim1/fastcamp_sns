@@ -30,4 +30,10 @@ public class FollowController {
     public List<MemberDto> getFollowers(@PathVariable Long fromId) {
         return getFollowingMembersUsacase.execute(fromId);
     }
+
+    @Operation(summary = "팔로워 조회")
+    @GetMapping("/members2/{fromId}")
+    public List<MemberDto> getFollowers2(@PathVariable Long fromId) {
+        return getFollowingMembersUsacase.execute(fromId);
+    }
 }
